@@ -1,6 +1,5 @@
 package cursor_education_JB;
 
-import javax.xml.crypto.Data;
 import java.time.LocalDate;
 
 public class User {
@@ -8,11 +7,11 @@ public class User {
     LocalDate loginData;
     String team;
 
-    public User(String email, LocalDate loginDate,String team){
-        this.email=email;
-        this.loginData=loginDate;
-        this.team=team;
-         }
+    public User(String email, LocalDate loginDate, String team) {
+        this.email = email;
+        this.loginData = loginDate;
+        this.team = team;
+    }
 
     public String getEmail() {
         return email;
