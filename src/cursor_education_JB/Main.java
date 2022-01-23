@@ -6,7 +6,7 @@ public class Main {
         // write your code here
 //        new Task1().startTask();
         new Task2().startTask();
-        new Task3().startTask();
-        new Task4().startTask();
+//        new Task3().startTask();
+//        new Task4().startTask();
     }
 }

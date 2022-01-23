@@ -3,11 +3,14 @@ package cursor_education_JB;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.SortedMap;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Task3 {
+
+
     public void startTask() {
         // 3.Есть 2 коллекции с фильмами. У каждого Фильма есть цена
         // билета, жанр. По каждому жанру рассчитайте среднюю цену
@@ -26,7 +29,7 @@ public class Task3 {
         List<List<Video>> list = new ArrayList<>();
         list.add(moviesList1);
 
-
+        Scratch.ActionAveragePrice();
         var listOfAllGenre = list.stream().flatMap(Collection::stream).collect(Collectors.toList());
         Supplier<Stream<Video>> streamOfMovies = listOfAllGenre::stream;
 
@@ -37,21 +40,21 @@ public class Task3 {
         var actionAveragePrice = streamOfMovies.get()
                 .filter(it -> it.getGenre() == CategoryFilmGenres.ARTHOUSE_SCIENCE_FICTION_FILM)
                 .collect(Collectors.averagingDouble(Video::getPrice));
-        System.out.println("Середня ціна квитка на Науково-фантастичний фільм:" + actionAveragePrice);
+        System.out.println("=" + actionAveragePrice);
 
         var comedyAveragePrice = streamOfMovies.get()
                 .filter(it -> it.getGenre() == CategoryFilmGenres.COMEDY_FILM)
                 .collect(Collectors.averagingDouble(Video::getPrice));
-        System.out.println("Середня ціна квитка на комедію:" + comedyAveragePrice);
+        System.out.println("=" + comedyAveragePrice);
 
         var dramaAveragePrice = streamOfMovies.get()
                 .filter(it -> it.getGenre() == CategoryFilmGenres.DRAMA_FILM)
                 .collect(Collectors.averagingDouble(Video::getPrice));
-        System.out.println("Середня ціна квитка на драму:" + dramaAveragePrice);
+        System.out.println("=" + dramaAveragePrice);
 
         var fantasyAveragePrice = streamOfMovies.get()
                 .filter(it -> it.getGenre() == CategoryFilmGenres.FANTASY_FILM)
                 .collect(Collectors.averagingDouble(Video::getPrice));
-        System.out.println("Середня ціна квитка на фантастику:" + fantasyAveragePrice);
+        System.out.println("=" + fantasyAveragePrice);
     }
 }
