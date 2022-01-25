@@ -29,7 +29,7 @@ public class Task3 {
         List<List<Video>> list = new ArrayList<>();
         list.add(moviesList1);
 
-        Scratch.ActionAveragePrice();
+        new Scratch(list, CategoryFilmGenres.ARTHOUSE_SCIENCE_FICTION_FILM).ActionAveragePrice();
         var listOfAllGenre = list.stream().flatMap(Collection::stream).collect(Collectors.toList());
         Supplier<Stream<Video>> streamOfMovies = listOfAllGenre::stream;
 
@@ -56,5 +56,6 @@ public class Task3 {
                 .filter(it -> it.getGenre() == CategoryFilmGenres.FANTASY_FILM)
                 .collect(Collectors.averagingDouble(Video::getPrice));
         System.out.println("=" + fantasyAveragePrice);
+
     }
 }
