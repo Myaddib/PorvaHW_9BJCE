@@ -35,18 +35,18 @@ public class Task3 {
                 .collect(Collectors.groupingBy(Video::getGenre, Collectors.counting()));
         System.out.println(countMovies);
 
-        MovieAveragePrice movieAveragePrice =new MovieAveragePrice(list);
+        MovieAveragePrice movieAveragePrice = new MovieAveragePrice(list);
 
-        System.out.println(CategoryFilmGenres.ARTHOUSE_SCIENCE_FICTION_FILM+" = "+movieAveragePrice.showMovieAveragePrice(CategoryFilmGenres.ARTHOUSE_SCIENCE_FICTION_FILM));
+        System.out.println(CategoryFilmGenres.ARTHOUSE_SCIENCE_FICTION_FILM + " = " + movieAveragePrice.showMovieAveragePrice(CategoryFilmGenres.ARTHOUSE_SCIENCE_FICTION_FILM));
 
-        System.out.println(CategoryFilmGenres.COMEDY_FILM+" = "+movieAveragePrice.showMovieAveragePrice(CategoryFilmGenres.COMEDY_FILM));
+        System.out.println(CategoryFilmGenres.COMEDY_FILM + " = " + movieAveragePrice.showMovieAveragePrice(CategoryFilmGenres.COMEDY_FILM));
 
-        System.out.println(CategoryFilmGenres.DRAMA_FILM+" = "+movieAveragePrice.showMovieAveragePrice(CategoryFilmGenres.DRAMA_FILM));
+        System.out.println(CategoryFilmGenres.DRAMA_FILM + " = " + movieAveragePrice.showMovieAveragePrice(CategoryFilmGenres.DRAMA_FILM));
 
-        System.out.println(CategoryFilmGenres.FANTASY_FILM+" = "+movieAveragePrice.showMovieAveragePrice(CategoryFilmGenres.FANTASY_FILM));
+        System.out.println(CategoryFilmGenres.FANTASY_FILM + " = " + movieAveragePrice.showMovieAveragePrice(CategoryFilmGenres.FANTASY_FILM));
 
-        System.out.println(CategoryFilmGenres.FANTASY_FILM+" = "+movieAveragePrice.showMovieAveragePrice(CategoryFilmGenres.FANTASY_FILM));
+        System.out.println(CategoryFilmGenres.FANTASY_FILM + " = " + movieAveragePrice.showMovieAveragePrice(CategoryFilmGenres.FANTASY_FILM));
 
-        System.out.println(CategoryFilmGenres.PSYCHOLOGICAL_THRILLER+" = "+movieAveragePrice.showMovieAveragePrice(CategoryFilmGenres.PSYCHOLOGICAL_THRILLER));
+        System.out.println(CategoryFilmGenres.PSYCHOLOGICAL_THRILLER + " = " + movieAveragePrice.showMovieAveragePrice(CategoryFilmGenres.PSYCHOLOGICAL_THRILLER));
     }
 }
